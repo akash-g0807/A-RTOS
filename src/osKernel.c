@@ -2,6 +2,7 @@
 #include <stm32f767xx.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 #define NUM_THREADS 3
 
@@ -45,7 +46,7 @@ static void task_finished(void)
 
 void osKernelInit(void)
 {
-	memset(&thread_table, 0, sizeof(thread_table));
+		memset(&thread_table, 0, sizeof(thread_table));
     MILLIS_PRESCALER = BUS_CLOCK_FREQ/1000;
 }
 

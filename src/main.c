@@ -52,7 +52,7 @@ int main(void){
 	osKernelThreadsInit(&Task3, stack3, 128);
 	
 	/* Context switch every second: */
-	osKernelLaunch(1000);
+	osKernelLaunch(100);
 	
 
 }
@@ -150,7 +150,6 @@ void Task1(void)
 		unlock_mutex(&output_mutex);
 	
 		delay(1000000);
-		osThreadYeild();
 		
 	}
 }
@@ -178,5 +177,4 @@ void Task3(void)
 
 	}
 }
-
 
